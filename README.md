@@ -1,6 +1,7 @@
 # Udemy Course on Ehtical Hacking with Golang
 Author : Fahad Sarwar <br>
 Course available on Udemy
+**Requirements: everything runs on Virtual Machines**
 
 ## Folders: <p>
 - 01_test :
@@ -15,10 +16,21 @@ Course available on Udemy
     * use nmap to scan network
 - 06_address_resolution_protocol: 
     * used with man in the middle (needs dsniff)
-    * set shell:
-    ```$sysctl -w net.ipv4.ip_forward=1```
-    * Then check:
-    ```$arp -a```
+    * Build 2 VM and a network on mode "host"
+    * Start the VM and Kali
+    * On Kali, switch to "root": ```$sudo su```
+    * Install dsniff : ```$sudo apt-get install dsniff```
+    * set shell: ```$sysctl -w net.ipv4.ip_forward=1```
+    * Then check: ```$arp -a```
+    * Syntax for spoofing: ```$arpspoof -i eth0 -t <ip victim machine or router> <ip attacker>``` 
+    * On Kali : open 2 terminals on root and spoof the victim and then the router.
+-07_packet_intercept:
+    - 01: find all devices. 
+    Need to install library```gopacket``` and ```libcap-dev```. <br>
+    Don't forget to have network on mode host<br>
+    
+    
+    
 
 
 
