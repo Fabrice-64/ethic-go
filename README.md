@@ -15,6 +15,7 @@ Course available on Udemy
 - 05_network_scanner: 
     * use nmap to scan network
 - 06_address_resolution_protocol: 
+    * No Use of Golang
     * used with man in the middle (needs dsniff)
     * Build 2 VM and a network on mode "host"
     * Start the VM and Kali
@@ -24,10 +25,14 @@ Course available on Udemy
     * Then check: ```$arp -a```
     * Syntax for spoofing: ```$arpspoof -i eth0 -t <ip victim machine or router> <ip attacker>``` 
     * On Kali : open 2 terminals on root and spoof the victim and then the router.
--07_packet_intercept:
+- 07_packet_intercept:
     - 01: find all devices. 
     Need to install library```gopacket``` and ```libcap-dev```. <br>
     Don't forget to have network on mode host<br>
+    - 02 : Intercept packets
+        * build up a MITM spoof using cli with 2 VM
+        * launch the go script and check the interception of packets.
+
     
     
     
